@@ -1328,9 +1328,13 @@
     color: var(--ink);
   }
 </style>
+<noscript><style>
+  .reveal, .fade-up { opacity: 1 !important; transform: none !important; animation: none !important; }
+</style></noscript>
 </head>
 <body>
 
+<header>
 <nav>
   <div class="container">
     <a href="#" class="nav-name">
@@ -1345,8 +1349,10 @@
     </div>
   </div>
 </nav>
+</header>
 
-<section class="hero">
+<main>
+<section class="hero" aria-label="Propuesta de valor">
   <div class="container">
     <div class="hero-grid">
       <div>
@@ -1371,7 +1377,7 @@
   </div>
 </section>
 
-<section class="stats">
+<section class="stats" aria-label="Experiencia y trayectoria">
   <div class="container">
     <div class="stats-grid">
       <div class="stat-item">
@@ -1394,7 +1400,7 @@
   </div>
 </section>
 
-<section class="problem">
+<section class="problem" aria-label="Problemas frecuentes en pymes">
   <div class="container">
     <p class="section-label">¿Te suena familiar?</p>
     <div class="problem-grid">
@@ -1412,7 +1418,7 @@
   </div>
 </section>
 
-<section class="two-paths">
+<section class="two-paths" aria-label="Dos caminos posibles">
   <div class="container">
     <div class="two-paths-header reveal">
       <p class="section-label">La decisión que tomás hoy</p>
@@ -1443,7 +1449,7 @@
   </div>
 </section>
 
-<section class="about">
+<section class="about" aria-label="Sobre Paula Sartuqui">
   <div class="container">
     <div class="about-inner">
       <div class="about-photo">
@@ -1466,7 +1472,7 @@
   </div>
 </section>
 
-<section class="testimonial">
+<section class="testimonial" aria-label="Testimonio">
   <div class="container">
     <div class="testimonial-inner reveal">
       <span class="testimonial-mark">"</span>
@@ -1485,7 +1491,7 @@
   </div>
 </section>
 
-<section class="social-proof">
+<section class="social-proof" aria-label="Diferenciadores">
   <div class="container">
     <div class="sp-grid">
       <div class="sp-highlight reveal">
@@ -1511,7 +1517,7 @@
   </div>
 </section>
 
-<section class="process">
+<section class="process" aria-label="Cómo trabajamos">
   <div class="container">
     <div class="process-header reveal">
       <p class="section-label">Cómo trabajamos</p>
@@ -1543,7 +1549,7 @@
   </div>
 </section>
 
-<section class="services" id="servicios">
+<section class="services" id="servicios" aria-label="Servicios de consultoría">
   <div class="container">
     <div class="services-header">
       <p class="section-label">Servicios</p>
@@ -1586,7 +1592,7 @@
   </div>
 </section>
 
-<section class="mentoring">
+<section class="mentoring" aria-label="Mentoría individual">
   <div class="container">
     <div class="mentoring-inner">
       <div class="mentoring-icon">
@@ -1600,7 +1606,7 @@
   </div>
 </section>
 
-<section class="faq">
+<section class="faq" aria-label="Preguntas frecuentes">
   <div class="container">
     <div class="faq-header reveal">
       <p class="section-label">Preguntas frecuentes</p>
@@ -1656,7 +1662,7 @@
   </div>
 </section>
 
-<section class="cta-section" id="contacto">
+<section class="cta-section" id="contacto" aria-label="Contacto">
   <div class="container">
     <div class="cta-inner">
       <h2>¿Querés saber si puedo ayudarte?</h2>
@@ -1675,6 +1681,8 @@
     </div>
   </div>
 </section>
+
+</main>
 
 <footer>
   <div class="container">
