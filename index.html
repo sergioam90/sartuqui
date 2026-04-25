@@ -755,6 +755,104 @@
     color: var(--accent);
   }
 
+  /* DOS CAMINOS */
+  .two-paths {
+    padding: 5rem 0;
+    background: var(--white);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  @media (min-width: 768px) { .two-paths { padding: 6rem 0; } }
+  .two-paths-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+  .two-paths-header .section-label { justify-content: center; }
+  .two-paths-header .section-label::before { display: none; }
+  .two-paths-header h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(26px, 4vw, 36px);
+    line-height: 1.2;
+    margin-top: 0.75rem;
+    color: var(--ink);
+  }
+  .two-paths-header h2 em { font-style: italic; color: var(--accent); }
+  .two-paths-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  @media (min-width: 600px) {
+    .two-paths-grid { grid-template-columns: 1fr 1fr; }
+  }
+  .path-card {
+    border-radius: var(--radius);
+    padding: 2rem;
+  }
+  .path-card.bad {
+    background: var(--cream);
+    border: 1px solid var(--border);
+  }
+  .path-card.good {
+    background: var(--ink);
+    border: 1px solid var(--ink);
+    position: relative;
+    overflow: hidden;
+  }
+  .path-card.good::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--accent);
+  }
+  .path-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 1.25rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .path-card.bad .path-label { color: var(--muted); }
+  .path-card.good .path-label { color: var(--accent); }
+  .path-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .path-list li {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.6;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+  .path-card.bad .path-list li { color: var(--muted); }
+  .path-card.bad .path-list li::before {
+    content: '✕';
+    position: absolute;
+    left: 0;
+    font-size: 11px;
+    color: var(--muted-light);
+    top: 2px;
+  }
+  .path-card.good .path-list li { color: rgba(250,248,245,0.85); }
+  .path-card.good .path-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    font-size: 11px;
+    color: var(--accent);
+    top: 2px;
+    font-weight: 600;
+  }
+
   /* SOBRE PAU */
   .about {
     padding: 5rem 0;
@@ -1190,10 +1288,10 @@
       <div>
         <p class="eyebrow fade-up">Consultoría en gestión y finanzas</p>
         <h1 class="fade-up fade-up-d1">Tu negocio creció.<br>Pero la forma de <em>manejarlo</em> quedó atrás.</h1>
-        <p class="hero-sub fade-up fade-up-d2">Ayudo a dueños de pymes a ordenar su operación, entender sus números reales y construir una estructura que les permita crecer sin depender de ellos mismos.</p>
+        <p class="hero-sub fade-up fade-up-d2">Ayudo a dueños de pymes a construir un sistema predecible: operación ordenada, números reales y una estructura que les permita crecer con rentabilidad y autonomía.</p>
         <div class="hero-actions fade-up fade-up-d3">
           <a href="#contacto" class="btn-primary">
-            Quiero ordenar mi negocio
+            Quiero cambiar esto
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3.5 8H12.5M12.5 8L8.5 4M12.5 8L8.5 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
           <a href="#servicios" class="btn-secondary">Ver servicios</a>
@@ -1245,6 +1343,37 @@
       </ul>
       <div class="problem-closing">
         No es trabajar más.<br>Es ordenar cómo <em>funciona</em> tu negocio.
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="two-paths">
+  <div class="container">
+    <div class="two-paths-header reveal">
+      <p class="section-label">La decisión que tomás hoy</p>
+      <h2>Dos caminos. <em>Uno tiene salida.</em></h2>
+    </div>
+    <div class="two-paths-grid">
+      <div class="path-card bad reveal reveal-d1">
+        <p class="path-label">↳ Seguir como estás</p>
+        <ul class="path-list">
+          <li>Otro año siendo el cuello de botella</li>
+          <li>Decisiones sin números reales</li>
+          <li>Trabajás más pero sin más rentabilidad</li>
+          <li>Sin sistema predecible, sin autonomía</li>
+          <li>El negocio sigue dependiendo de que vos estés</li>
+        </ul>
+      </div>
+      <div class="path-card good reveal reveal-d2">
+        <p class="path-label">↳ Ordenar tu negocio</p>
+        <ul class="path-list">
+          <li>Un equipo que funciona sin que estés en todo</li>
+          <li>Claridad financiera y control real</li>
+          <li>Crecimiento con rentabilidad sostenida</li>
+          <li>Autonomía, escalabilidad, sistema predecible</li>
+          <li>Un negocio que trabaja para vos</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -1447,7 +1576,7 @@
   <div class="container">
     <div class="cta-inner">
       <h2>¿Querés saber si puedo ayudarte?</h2>
-      <p class="cta-sub">Me contás cómo estás hoy y vemos si tiene sentido trabajar juntos.<br>Si puedo ayudarte, te lo voy a decir. Y si no, también.</p>
+      <p class="cta-sub">La decisión que tomás hoy define cómo va a ser tu próximo año.<br>30 minutos, sin costo, sin compromiso.</p>
       <div class="cta-buttons">
         <a href="https://wa.me/5492914325990?text=Hola%20Paula%2C%20te%20contacto%20desde%20tu%20web.%20Me%20gustar%C3%ADa%20coordinar%20una%20charla." target="_blank" class="btn-wa">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
