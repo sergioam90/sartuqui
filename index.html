@@ -5,9 +5,46 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Paula Sartuqui — Consultoría en gestión y finanzas para pymes</title>
 <meta name="description" content="Ayudo a dueños de pymes a ordenar su operación, entender sus números reales y construir una estructura para crecer sin depender de ellos mismos.">
+<link rel="canonical" href="https://paulasartuqui.com.ar/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://paulasartuqui.com.ar/">
+<meta property="og:title" content="Paula Sartuqui — Consultoría en gestión y finanzas para pymes">
+<meta property="og:description" content="Ayudo a dueños de pymes a ordenar su operación, entender sus números reales y construir una estructura para crecer sin depender de ellos mismos.">
+<meta property="og:image" content="https://paulasartuqui.com.ar/paula.jpg">
+<meta property="og:locale" content="es_AR">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Paula Sartuqui — Consultoría para pymes">
+<meta name="twitter:description" content="Ayudo a dueños de pymes a ordenar su operación y construir una estructura para crecer.">
+<meta name="twitter:image" content="https://paulasartuqui.com.ar/paula.jpg">
+
+<!-- JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Paula Sartuqui",
+  "jobTitle": "Consultora en gestión y finanzas para pymes",
+  "url": "https://paulasartuqui.com.ar",
+  "image": "https://paulasartuqui.com.ar/paula.jpg",
+  "sameAs": ["https://www.linkedin.com/in/maria-paula-sartuqui-67a305153/"],
+  "email": "psartuqui@gmail.com",
+  "telephone": "+5492914325990",
+  "address": { "@type": "PostalAddress", "addressCountry": "AR" },
+  "offers": {
+    "@type": "Offer",
+    "name": "Consultoría empresarial para pymes",
+    "description": "Diagnóstico, implementación y acompañamiento para dueños de pymes de servicios y gastronomía."
+  }
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&display=swap&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -69,6 +106,184 @@
   .fade-up-d2 { animation-delay: 0.2s; }
   .fade-up-d3 { animation-delay: 0.3s; }
   .fade-up-d4 { animation-delay: 0.4s; }
+
+  /* SCROLL REVEAL */
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.65s ease-out, transform 0.65s ease-out;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .reveal-d1 { transition-delay: 0.1s; }
+  .reveal-d2 { transition-delay: 0.2s; }
+  .reveal-d3 { transition-delay: 0.3s; }
+  .reveal-d4 { transition-delay: 0.4s; }
+
+  /* PROCESO */
+  .process {
+    padding: 5rem 0;
+    background: var(--cream-dark);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  @media (min-width: 768px) { .process { padding: 6rem 0; } }
+  .process-header {
+    margin-bottom: 3rem;
+  }
+  .process-header h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(26px, 4vw, 36px);
+    line-height: 1.2;
+    margin-top: 0.75rem;
+    color: var(--ink);
+  }
+  .process-header h2 em { font-style: italic; color: var(--accent); }
+  .process-steps {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  @media (min-width: 640px) {
+    .process-steps { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (min-width: 1024px) {
+    .process-steps { grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
+  }
+  .process-step {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.75rem;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  .process-step:hover {
+    border-color: var(--accent);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-3px);
+  }
+  .process-step-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 42px;
+    color: var(--accent);
+    opacity: 0.25;
+    line-height: 1;
+    margin-bottom: 0.75rem;
+  }
+  .process-step-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 18px;
+    color: var(--ink);
+    margin-bottom: 0.6rem;
+    line-height: 1.25;
+  }
+  .process-step-desc {
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+  .process-step-badge {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: var(--accent-light);
+    padding: 3px 10px;
+    border-radius: 100px;
+    margin-bottom: 14px;
+  }
+
+  /* FAQ */
+  .faq {
+    padding: 5rem 0;
+    background: var(--cream);
+  }
+  @media (min-width: 768px) { .faq { padding: 6rem 0; } }
+  .faq-header {
+    max-width: 560px;
+    margin-bottom: 3rem;
+  }
+  .faq-header h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(26px, 4vw, 36px);
+    line-height: 1.2;
+    margin-top: 0.75rem;
+    color: var(--ink);
+  }
+  .faq-list {
+    max-width: 720px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--white);
+  }
+  .faq-item {
+    border-bottom: 1px solid var(--border);
+  }
+  .faq-item:last-child { border-bottom: none; }
+  .faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: left;
+    padding: 1.4rem 1.75rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--ink);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    transition: background 0.2s ease;
+    line-height: 1.5;
+  }
+  .faq-question:hover { background: var(--cream); }
+  .faq-question.open { color: var(--accent); }
+  .faq-icon {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1.5px solid var(--border-strong);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    color: var(--muted);
+  }
+  .faq-question.open .faq-icon {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--white);
+    transform: rotate(45deg);
+  }
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, padding 0.3s ease;
+    padding: 0 1.75rem;
+  }
+  .faq-answer.open {
+    max-height: 300px;
+    padding: 0 1.75rem 1.4rem;
+  }
+  .faq-answer p {
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--muted);
+    line-height: 1.8;
+  }
 
   /* NAV */
   nav {
@@ -842,7 +1057,7 @@
     <div class="hero-grid">
       <div>
         <p class="eyebrow fade-up">Consultoría en gestión y finanzas</p>
-        <h1 class="fade-up fade-up-d1">Tu negocio creció.<br><em>La estructura,</em> todavía no.</h1>
+        <h1 class="fade-up fade-up-d1">Tu negocio creció.<br>Pero la forma de <em>manejarlo</em> quedó atrás.</h1>
         <p class="hero-sub fade-up fade-up-d2">Ayudo a dueños de pymes a ordenar su operación, entender sus números reales y construir una estructura que les permita crecer sin depender de ellos mismos.</p>
         <div class="hero-actions fade-up fade-up-d3">
           <a href="#contacto" class="btn-primary">
@@ -890,14 +1105,14 @@
     <p class="section-label">¿Te suena familiar?</p>
     <div class="problem-grid">
       <ul class="problem-list">
-        <li>Trabajás más horas que nunca pero no sabés si realmente estás ganando plata.</li>
-        <li>No podés delegar porque nadie sabe hacer las cosas como vos.</li>
-        <li>Tomás decisiones importantes sin tener los números claros.</li>
-        <li>El negocio depende completamente de tu presencia diaria.</li>
-        <li>Sentís que vas apagando incendios en lugar de construir algo sólido.</li>
+        <li>Trabajás cada vez más, pero no tenés claro cuánto estás ganando realmente.</li>
+        <li>Sentís que no podés delegar porque todo pasa por vos.</li>
+        <li>Tomás decisiones sin tener números confiables.</li>
+        <li>Si no estás, el negocio se frena.</li>
+        <li>Vivís resolviendo urgencias en lugar de pensar a largo plazo.</li>
       </ul>
       <div class="problem-closing">
-        No necesitás trabajar más.<br>Necesitás trabajar con <em>estructura.</em>
+        No es trabajar más.<br>Es ordenar cómo <em>funciona</em> tu negocio.
       </div>
     </div>
   </div>
@@ -911,15 +1126,47 @@
       </div>
       <div class="about-text">
         <p class="section-label">Por qué yo</p>
-        <h2>No trabajo desde la teoría.<br>Vengo de <em>operar</em> negocios reales.</h2>
-        <p>Llevo más de 10 años liderando áreas administrativas y financieras en empresas de servicios. Sé lo que es estar adentro de un negocio que crece más rápido que su estructura.</p>
-        <p>No entrego un informe y desaparezco. Implemento junto con vos y acompaño hasta que los cambios quedan instalados en el día a día.</p>
+        <h2>No trabajo desde la teoría.<br>Trabajo desde la <em>experiencia real.</em></h2>
+        <p>Hace más de 10 años estoy adentro de empresas, liderando áreas administrativas y financieras. Sé lo que es un negocio que crece… y se desordena en el camino.</p>
+        <p>No entrego un informe y desaparezco. Trabajo con vos en la implementación hasta que las cosas realmente funcionan en el día a día.</p>
         <div class="credentials">
           <div class="credential"><span class="credential-icon">&#9670;</span> Gerenta en RE/MAX Argentina, una de las inmobiliarias líderes del país</div>
           <div class="credential"><span class="credential-icon">&#9670;</span> Formación en hotelería y calidad ISO 9001</div>
           <div class="credential"><span class="credential-icon">&#9670;</span> Especialización en pymes de servicios y gastronomía</div>
           <div class="credential"><span class="credential-icon">&#9670;</span> Certificación en consultoría empresarial</div>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="process">
+  <div class="container">
+    <div class="process-header reveal">
+      <p class="section-label">Cómo trabajamos</p>
+      <h2>Un proceso claro,<br>sin <em>vueltas.</em></h2>
+    </div>
+    <div class="process-steps">
+      <div class="process-step reveal reveal-d1">
+        <p class="process-step-num">01</p>
+        <span class="process-step-badge">Gratis · 30 min</span>
+        <p class="process-step-title">Charla inicial</p>
+        <p class="process-step-desc">Me contás cómo está tu negocio hoy. Yo escucho y te digo con honestidad si tiene sentido trabajar juntos.</p>
+      </div>
+      <div class="process-step reveal reveal-d2">
+        <p class="process-step-num">02</p>
+        <p class="process-step-title">Diagnóstico</p>
+        <p class="process-step-desc">Me meto en los números, la operación y la estructura. Sin filtros. Para entender dónde están los problemas reales.</p>
+      </div>
+      <div class="process-step reveal reveal-d3">
+        <p class="process-step-num">03</p>
+        <p class="process-step-title">Plan de acción</p>
+        <p class="process-step-desc">Definimos prioridades, tiempos y forma de trabajo. Un plan concreto, no un PowerPoint lleno de generalidades.</p>
+      </div>
+      <div class="process-step reveal reveal-d4">
+        <p class="process-step-num">04</p>
+        <p class="process-step-title">Implementación</p>
+        <p class="process-step-desc">Trabajo con vos hasta que los cambios quedan instalados en el día a día. No desaparezco cuando se complica.</p>
       </div>
     </div>
   </div>
@@ -982,11 +1229,67 @@
   </div>
 </section>
 
+<section class="faq">
+  <div class="container">
+    <div class="faq-header reveal">
+      <p class="section-label">Preguntas frecuentes</p>
+      <h2>Lo que me suelen preguntar antes de arrancar</h2>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          ¿Cómo sé si realmente necesito una consultora?
+          <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M5 2V8M2 5H8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+        </button>
+        <div class="faq-answer">
+          <p>Si sentís que tu negocio creció pero la forma de manejarlo no acompañó ese crecimiento, probablemente sí. Si tomás decisiones sin números claros, si no podés delegar, si el negocio depende de que vos estés presente — esas son señales concretas de que hay algo para ordenar.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          ¿En qué se diferencia tu trabajo del de un contador?
+          <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M5 2V8M2 5H8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+        </button>
+        <div class="faq-answer">
+          <p>El contador registra y cumple con lo impositivo. Yo trabajo en la gestión interna: cómo funciona el negocio por dentro, qué números mirás para tomar decisiones, cómo organizás los procesos, cómo construís estructura para crecer. Son roles distintos y complementarios.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          ¿Trabajás con negocios chicos o solo con empresas grandes?
+          <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M5 2V8M2 5H8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+        </button>
+        <div class="faq-answer">
+          <p>Trabajo específicamente con pymes. No con corporaciones ni con negocios que recién empiezan. Mi punto dulce son los negocios que ya tienen tracción — que venden, que tienen equipo — pero que necesitan ordenarse para poder seguir creciendo sin caos.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          ¿Cómo son los primeros pasos si decidimos trabajar juntos?
+          <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M5 2V8M2 5H8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+        </button>
+        <div class="faq-answer">
+          <p>Arrancamos con una charla de 30 minutos sin costo. Si tiene sentido seguir, hacemos un diagnóstico para entender bien la situación antes de proponer cualquier cosa. No hay compromiso hasta que los dos estemos convencidos de que podemos avanzar juntos.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          ¿Los precios son fijos o dependen de cada caso?
+          <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M5 2V8M2 5H8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+        </button>
+        <div class="faq-answer">
+          <p>Los rangos que ves en la sección de servicios son reales, pero el precio final depende del tamaño del negocio, el alcance del trabajo y la complejidad. Lo definimos después del diagnóstico, cuando tengo claro qué hace falta. Sin sorpresas.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="cta-section" id="contacto">
   <div class="container">
     <div class="cta-inner">
       <h2>¿Querés saber si puedo ayudarte?</h2>
-      <p class="cta-sub">Arrancamos con una charla de 30 minutos sin costo. Me contás dónde estás parado y te digo honestamente si tiene sentido trabajar juntos.</p>
+      <p class="cta-sub">Me contás cómo estás hoy y vemos si tiene sentido trabajar juntos.<br>Si puedo ayudarte, te lo voy a decir. Y si no, también.</p>
       <div class="cta-buttons">
         <a href="https://wa.me/5492914325990" target="_blank" class="btn-wa">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -1012,5 +1315,32 @@
   </div>
 </footer>
 
+<script>
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // FAQ accordion
+  function toggleFaq(btn) {
+    const answer = btn.nextElementSibling;
+    const isOpen = btn.classList.contains('open');
+    // Close all
+    document.querySelectorAll('.faq-question.open').forEach(b => {
+      b.classList.remove('open');
+      b.nextElementSibling.classList.remove('open');
+    });
+    if (!isOpen) {
+      btn.classList.add('open');
+      answer.classList.add('open');
+    }
+  }
+</script>
 </body>
 </html>
