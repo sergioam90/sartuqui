@@ -755,6 +755,70 @@
     color: var(--accent);
   }
 
+  /* TESTIMONIO */
+  .testimonial {
+    padding: 4rem 0;
+    background: var(--white);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .testimonial-inner {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2.5rem;
+    background: var(--cream);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    position: relative;
+  }
+  .testimonial-mark {
+    font-family: 'DM Serif Display', serif;
+    font-size: 72px;
+    line-height: 0.5;
+    color: var(--accent);
+    opacity: 0.3;
+    display: block;
+    margin-bottom: 1.5rem;
+  }
+  .testimonial-text {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(17px, 2.5vw, 21px);
+    line-height: 1.6;
+    color: var(--ink);
+    font-style: italic;
+    margin-bottom: 1.75rem;
+    border: none;
+    padding: 0;
+  }
+  .testimonial-author {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+  }
+  .testimonial-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .testimonial-role {
+    font-size: 13px;
+    font-weight: 300;
+    color: var(--muted);
+  }
+  .testimonial-source {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 10px;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
   /* DOS CAMINOS */
   .two-paths {
     padding: 5rem 0;
@@ -1311,16 +1375,16 @@
   <div class="container">
     <div class="stats-grid">
       <div class="stat-item">
-        <p class="stat-number">+16</p>
+        <p class="stat-number">+14</p>
         <p class="stat-label">Años adentro de negocios reales</p>
       </div>
       <div class="stat-item">
-        <p class="stat-number">8 años</p>
-        <p class="stat-label">en franquicia McDonald's, gerenta de local</p>
+        <p class="stat-number">5 años</p>
+        <p class="stat-label">como gerente en franquicia McDonald's</p>
       </div>
       <div class="stat-item">
         <p class="stat-number">RE/MAX</p>
-        <p class="stat-label">Construyó el equipo y la operación desde cero</p>
+        <p class="stat-label">Gerente Financiero y Administrativo desde dic. 2021</p>
       </div>
       <div class="stat-item">
         <p class="stat-number">100%</p>
@@ -1388,15 +1452,34 @@
       <div class="about-text">
         <p class="section-label">Por qué yo</p>
         <h2>No llegué a esto estudiando.<br>Llegué <em>construyendo.</em></h2>
-        <p>Pasé 8 años dentro de una franquicia McDonald's. Arranqué desde abajo y terminé como gerenta de local. Aprendí lo que significa tener un negocio que exige estructura todos los días, sin excusas.</p>
-        <p>Después los mismos dueños me llamaron para RE/MAX Bahía Blanca. Entré sola — era todo el staff. Construí el equipo, los procesos y el orden operativo desde cero. Hoy soy la mano derecha de los dueños, responsable de los números y las decisiones que importan.</p>
-        <p>Sé lo que es un negocio que crece y se desordena. Lo viví. Por eso no entrego informes y desaparezco — trabajo con vos hasta que las cosas realmente funcionan.</p>
+        <p>Pasé casi 8 años en una franquicia McDonald's. Entré como crew y llegué a gerente de local — 5 años manejando operaciones, equipos y presión real todos los días.</p>
+        <p>Los mismos dueños me convocaron para RE/MAX Sudeste en Bahía Blanca. Entré como la única persona del staff y construí el equipo y los procesos desde cero. Hoy, como Gerente Financiera y Administrativa, soy la mano derecha del directorio: números, decisiones y estructura operativa.</p>
+        <p>No entrego un informe y desaparezco. Trabajo con vos hasta que las cosas realmente funcionan en el día a día.</p>
         <div class="credentials">
-          <div class="credential"><span class="credential-icon">&#9670;</span> 8 años en franquicia McDonald's — gerenta de local</div>
-          <div class="credential"><span class="credential-icon">&#9670;</span> Construyó el equipo de RE/MAX Bahía Blanca desde cero</div>
-          <div class="credential"><span class="credential-icon">&#9670;</span> Formación en hotelería y calidad ISO 9001</div>
+          <div class="credential"><span class="credential-icon">&#9670;</span> Gerente Financiero y Administrativo · RE/MAX Sudeste, Bahía Blanca</div>
+          <div class="credential"><span class="credential-icon">&#9670;</span> ~8 años en franquicia McDonald's — 5 de ellos como gerente de local</div>
+          <div class="credential"><span class="credential-icon">&#9670;</span> Lic. en Organización Industrial · UTN</div>
           <div class="credential"><span class="credential-icon">&#9670;</span> Certificación en consultoría — SET Consulting, Jonatan Loidi</div>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonial">
+  <div class="container">
+    <div class="testimonial-inner reveal">
+      <span class="testimonial-mark">"</span>
+      <blockquote class="testimonial-text">
+        Es una persona proactiva, responsable, siempre en búsqueda de resoluciones eficientes. Es líder nata, tiene un gran manejo del personal. No dudaría en volver a formar equipo con ella.
+      </blockquote>
+      <div class="testimonial-author">
+        <p class="testimonial-name">Mayra Troyansky</p>
+        <p class="testimonial-role">Manager Customer Service · ConsorcioAbierto</p>
+        <span class="testimonial-source">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          Recomendación verificada en LinkedIn
+        </span>
       </div>
     </div>
   </div>
@@ -1408,7 +1491,7 @@
       <div class="sp-highlight reveal">
         <p class="sp-label">Lo que me diferencia</p>
         <h2 class="sp-title">No aprendí esto en un aula.<br>Lo aprendí <em>adentro de los negocios.</em></h2>
-        <p class="sp-desc">8 años en McDonald's, gerenta de local. Luego construyó el equipo y la operación de RE/MAX Bahía Blanca desde cero. Lo que te recomiendo no es teoría — es lo que ya hice funcionar en negocios reales.</p>
+        <p class="sp-desc">Casi 8 años en franquicia McDonald's, 5 como gerente de local. Luego construyó el equipo y la operación de RE/MAX Sudeste desde cero. Hoy es Gerente Financiera y Administrativa. Lo que te recomiendo no es teoría — es lo que ya hice funcionar.</p>
       </div>
       <div class="sp-cards">
         <div class="sp-card reveal reveal-d1">
